@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.card_container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+}
+.card_container h1 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0.5rem;
+}
+.card_container p {
+  font-size: 18px;
+  text-align: center;
+  margin: 0.5rem;
+  line-height: 1.5rem;
+}
+.form {
+  margin: 0.5rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.guessField {
+  width: fit-content;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #28a745;
+  margin: 0.5rem;
+}
+.guessField:focus {
+  outline: none;
+}
+.guessField::placeholder {
+  color: #28a745;
+  opacity: 0.5;
+}
+.guessSubmit {
+  width: fit-content;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #28a745;
+  background-color: #3f9253;
+  color: #fff;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.resultParas {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+.resultParas p {
+  font-size: 16px;
+  text-align: center;
+}
+.loworHi {
+  color: #111;
+  font-size: 20px;
+  font-weight: bold;
+}
+.social_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.social_media h2 {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.social_media a {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #28a745;
+}
+.social_media a:hover {
+  color: #72a27d;
+  transition: all 0.3s ease-in-out;
+}
