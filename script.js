@@ -17,19 +17,20 @@ let playGame = true;
 if (playGame) {
   submitButton.addEventListener("click", function (event) {
     const guess = parseInt(userInput.value);
-    console.log(guess);
     validateGuess(guess);
   });
 }
 
 function validateGuess(guess) {
-  if (isNaN(guess) && guess < 1 && guess < 100) {
-    alert("Please enter a Valid number");
+  if(isNaN(guess)) {
+    alert("Please enter a valid number");
+  } else if(guess > 100 || guess < 1) {
+    alert("Please enter a number between 1 and 100");
   } else {
     prevGuess.push(guess);
     if (numGuess === 10) {
       displayGuess(guess);
-      displayMessage(`Game Over. Random number was ${randomNumber}`);
+      displayMessage(`Game Over! Random number was ${randomNumber}`);
       endGame();
     } else {
       displayGuess(guess);
@@ -40,12 +41,12 @@ function validateGuess(guess) {
 
 function checkGuess(guess) {
   if (guess === randomNumber) {
-    displayMessage(`You guessed it right`);
+    displayMessage(`You guessed it Right in ${numGuess} attempts`);
     endGame();
   } else if (guess < randomNumber) {
-    displayMessage(`Number is TOOO low`);
+    displayMessage(`Number is TOO Low`);
   } else if (guess > randomNumber) {
-    displayMessage(`Number is TOOO high`);
+    displayMessage(`Number is TOO High`);
   }
 }
 
@@ -53,7 +54,7 @@ function displayGuess(guess) {
   userInput.value = "";
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
-  remaining.innerHTML = `${10 - numGuess}`;
+  remaining.innerHTML = `${11 - numGuess}`;
 }
 
 function displayMessage(message) {

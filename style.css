@@ -85,6 +85,18 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+#newGame{
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #28a745;
+  background-color: #3f9253;
+  color: #fff;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
 .social_media {
   display: flex;
   justify-content: center;
