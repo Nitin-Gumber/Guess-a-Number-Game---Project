@@ -44,9 +44,9 @@ function checkGuess(guess) {
     displayMessage(`You guessed it Right in ${numGuess} attempts`);
     endGame();
   } else if (guess < randomNumber) {
-    displayMessage(`Number is TOO Low`);
+    displayMessage(`Your guess ${guess} Number is TOO Low to Acctual Number`);
   } else if (guess > randomNumber) {
-    displayMessage(`Number is TOO High`);
+    displayMessage(`Your guess ${guess} Number is TOO High to Acctual Number`);
   }
 }
 
@@ -78,8 +78,8 @@ function newGame() {
     prevGuess = [];
     numGuess = 1;
     guessSlot.innerHTML = "";
-    remaining.innerHTML = `${10 - numGuess}`;
-    userInput.removeAttribute("disables");
+    remaining.innerHTML = `${11 - numGuess}`;
+    userInput.removeAttribute("disabled");
     startOver.removeChild(p);
     playGame = true;
   });
