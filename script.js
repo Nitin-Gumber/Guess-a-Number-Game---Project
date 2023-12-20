@@ -41,7 +41,7 @@ function validateGuess(guess) {
 
 function checkGuess(guess) {
   if (guess === randomNumber) {
-    displayMessage(`You guessed it Right in ${numGuess} attempts`);
+    displayMessage(`You guessed it Right in ${numGuess-1} attempts`);
     endGame();
   } else if (guess < randomNumber) {
     displayMessage(`Your guess ${guess} Number is TOO Low to Acctual Number`);
