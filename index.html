@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>guess Number game</title>
+    <!-- CSS Link file -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Link file -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -14,13 +16,14 @@
     />
   </head>
   <body>
-
+    <!-- Card container Start here -->
     <div class="card_container">
       <p>
         Try and Guess a random Number between 1 and 100. You have 10 attemps to
         guess the right number.
       </p>
       <h1>Guess a Number</h1>
+      <!-- form Section start here -->
       <form class="form" onsubmit="return false">
         <input
           type="text"
@@ -35,26 +38,33 @@
           class="guessSubmit"
         />
       </form>
-
+      <!-- form Section end here -->
+      <!-- result and message show here -->
         <div class="resultParas">
           <p>Previous Guesses: <span class="guesses"></span></p>
           <p>Guesses Remaining: <span class="lastResult">10</span></p>
           <p class="loworHi"></p>
         </div>
-    
-    <div class="social_media">
-      <h2>Follow</h2>
-      <a
-        target="_blank"
-        href="https://instagram.com/nitin.gumber_?igshid=NzZlODBkYWE4Ng=="
-        ><i class="fa-brands fa-instagram"></i
-      ></a>
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/nitin-kumar-a55614248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-        ><i class="fa-brands fa-linkedin"></i
-      ></a>
+      <!-- result section end here -->
+      <!-- Social media section start here -->
+      <div class="social_media">
+        <h2>Follow</h2>
+        <a
+          target="_blank"
+          href="https://instagram.com/nitin.gumber_?igshid=NzZlODBkYWE4Ng=="
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/nitin-kumar-a55614248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <!-- Social media section end here -->
     </div>
+    <!-- Card container end here -->
+
+    <!-- JS Link file -->
     <script src="script.js"></script>
   </body>
 </html>
