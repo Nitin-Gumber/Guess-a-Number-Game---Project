@@ -1,5 +1,7 @@
+"use strict";
 // create a random number between 1 and 100
 let randomNumber = parseInt(Math.random() * 100 + 1);
+console.log(randomNumber);
 
 // select all the elements in the HTML page
 const submitButton = document.querySelector("#submit");
@@ -32,9 +34,9 @@ function validateGuess(guess) {
     alert("Please enter a number between 1 and 100");
   } else {
     prevGuess.push(guess);
-    if (numGuess === 7) {
+    if (numGuess === 7 && guess !== randomNumber) {
       displayGuess(guess);
-      displayMessage(`Game Over! Random number was ${randomNumber}`);
+      displayMessage(`Game Over! Random number was ${randomNumber} 😢`);
       endGame();
     } else {
       displayGuess(guess);
@@ -46,7 +48,7 @@ function validateGuess(guess) {
 // Check the guess
 function checkGuess(guess) {
   if (guess === randomNumber) {
-    displayMessage(`You guessed it Right in ${numGuess-1} attempts`);
+    displayMessage(`You guessed it Right in ${numGuess-1} attempts 🎉`);
     endGame();
   } else if (guess < randomNumber) {
     displayMessage(`Your guess ${guess} Number is TOO Low to Acctual Number`);
@@ -90,5 +92,6 @@ function newGame() {
     displayMessage("");
     startOver.removeChild(p);
     playGame = true;
+    console.log(randomNumber);
   });
 }
