@@ -32,7 +32,7 @@ function validateGuess(guess) {
     alert("Please enter a number between 1 and 100");
   } else {
     prevGuess.push(guess);
-    if (numGuess === 10) {
+    if (numGuess === 7) {
       displayGuess(guess);
       displayMessage(`Game Over! Random number was ${randomNumber}`);
       endGame();
@@ -60,7 +60,7 @@ function displayGuess(guess) {
   userInput.value = "";
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
-  remaining.innerHTML = `${11 - numGuess}`;
+  remaining.innerHTML = `${8 - numGuess}`;
 }
 
   // Display the message
@@ -85,7 +85,7 @@ function newGame() {
     randomNumber = parseInt(Math.random() * 100 + 1);
     numGuess = 1;
     guessSlot.innerHTML = "";
-    remaining.innerHTML = `${11 - numGuess}`;
+    remaining.innerHTML = `${8 - numGuess}`;
     userInput.removeAttribute("disabled");
     displayMessage("");
     startOver.removeChild(p);
