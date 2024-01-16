@@ -1,7 +1,6 @@
 "use strict";
 // create a random number between 1 and 100
 let randomNumber = parseInt(Math.random() * 100 + 1);
-console.log(randomNumber);
 
 // select all the elements in the HTML page
 const submitButton = document.querySelector("#submit");
@@ -26,6 +25,24 @@ if (playGame) {
   });
 }
 
+//  let timeOver;
+ let interValid;
+ let timer = 61;
+function runTimer(){
+  // let timer = 61;
+  interValid = setInterval(() =>{
+    if(timer>0){
+      timer--;
+      document.querySelector(".timerun").innerHTML = timer;
+    } else{
+      clearInterval(interValid);
+      displayMessage(`Time Out! Random number was ${randomNumber} 😢`);
+      endGame();
+    }
+  },1000)
+}
+ runTimer();
+
   // Validate the guess
 function validateGuess(guess) {
   if(isNaN(guess)) {
@@ -48,8 +65,9 @@ function validateGuess(guess) {
 // Check the guess
 function checkGuess(guess) {
   if (guess === randomNumber) {
-    displayMessage(`You guessed it Right in ${numGuess-1} attempts 🎉`);
+    displayMessage(`You guessed it Right in ${numGuess-1} attempts & ${60 - timer} Seconds🎉`);
     endGame();
+    clearInterval(interValid);
   } else if (guess < randomNumber) {
     displayMessage(`Your guess ${guess} Number is TOO Low to Acctual Number`);
   } else if (guess > randomNumber) {
@@ -92,6 +110,7 @@ function newGame() {
     displayMessage("");
     startOver.removeChild(p);
     playGame = true;
-    console.log(randomNumber);
+    timer = 61;
+    runTimer();
   });
 }
