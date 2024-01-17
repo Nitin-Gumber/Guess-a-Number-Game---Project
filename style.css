@@ -1,10 +1,10 @@
-  /* Global Styles */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-  /* Body Styles */
+/* Body Styles */
 body {
   background-color: #f0f0f0;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +14,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
-  /* Container Styles */
+/* Container Styles */
 .card_container {
   max-width: 500px;
   margin: 0 auto;
@@ -37,18 +37,16 @@ body {
   font-weight: 600;
 }
 
-.timerun{
+.timerun {
   font-size: 2rem;
   text-align: center;
   margin: 0.5rem;
   line-height: 1.5rem;
   color: #28a745;
   /* font-weight: bold; */
-  
 }
 
-
-  /* Form Styles */
+/* Form Styles */
 .form {
   margin: 0.5rem 0;
   text-align: center;
@@ -89,7 +87,7 @@ body {
   background-color: #297a3c;
   transition: all 0.5s ease-in-out;
 }
-  /* Result Styles */
+/* Result Styles */
 .resultParas {
   width: 100%;
   margin: 0 auto;
@@ -107,7 +105,7 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
-#newGame{
+#newGame {
   text-align: center;
   font-size: 18px;
   padding: 5px;
@@ -118,7 +116,7 @@ body {
   margin: 0.5rem;
   cursor: pointer;
 }
-  /* Social media Style */
+/* Social media Style */
 .social_media {
   display: flex;
   justify-content: center;

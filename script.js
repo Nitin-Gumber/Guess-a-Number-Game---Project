@@ -17,7 +17,7 @@ let numGuess = 1; // store the number of guess
 
 let playGame = true; // store the game state
 
-  // Play the game
+// Play the game
 if (playGame) {
   submitButton.addEventListener("click", function (event) {
     const guess = parseInt(userInput.value);
@@ -25,29 +25,27 @@ if (playGame) {
   });
 }
 
-//  let timeOver;
- let interValid;
- let timer = 61;
-function runTimer(){
-  // let timer = 61;
-  interValid = setInterval(() =>{
-    if(timer>0){
+let interValid;
+let timer = 61;
+function runTimer() {
+  interValid = setInterval(() => {
+    if (timer > 0) {
       timer--;
       document.querySelector(".timerun").innerHTML = timer;
-    } else{
+    } else {
       clearInterval(interValid);
       displayMessage(`Time Out! Random number was ${randomNumber} 😢`);
       endGame();
     }
-  },1000)
+  }, 1000);
 }
- runTimer();
+runTimer();
 
-  // Validate the guess
+// Validate the guess
 function validateGuess(guess) {
-  if(isNaN(guess)) {
+  if (isNaN(guess)) {
     alert("Please enter a valid number");
-  } else if(guess > 100 || guess < 1) {
+  } else if (guess > 100 || guess < 1) {
     alert("Please enter a number between 1 and 100");
   } else {
     prevGuess.push(guess);
@@ -55,6 +53,7 @@ function validateGuess(guess) {
       displayGuess(guess);
       displayMessage(`Game Over! Random number was ${randomNumber} 😢`);
       endGame();
+      clearInterval(interValid);
     } else {
       displayGuess(guess);
       checkGuess(guess);
@@ -65,7 +64,11 @@ function validateGuess(guess) {
 // Check the guess
 function checkGuess(guess) {
   if (guess === randomNumber) {
-    displayMessage(`You guessed it Right in ${numGuess-1} attempts & ${60 - timer} Seconds🎉`);
+    displayMessage(
+      `You guessed it Right in ${numGuess - 1} attempts & ${
+        60 - timer
+      } Seconds🎉`
+    );
     endGame();
     clearInterval(interValid);
   } else if (guess < randomNumber) {
@@ -75,7 +78,7 @@ function checkGuess(guess) {
   }
 }
 
-  // Display the guess
+// Display the guess
 function displayGuess(guess) {
   userInput.value = "";
   guessSlot.innerHTML += `${guess}, `;
@@ -83,12 +86,12 @@ function displayGuess(guess) {
   remaining.innerHTML = `${8 - numGuess}`;
 }
 
-  // Display the message
+// Display the message
 function displayMessage(message) {
   lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
-  // End the game
+// End the game
 function endGame() {
   userInput.value = "";
   userInput.setAttribute("disabled", "");
@@ -98,7 +101,7 @@ function endGame() {
   newGame();
 }
 
-  // Start a new games
+// Start a new games
 function newGame() {
   const newGameButton = document.querySelector("#newGame");
   newGameButton.addEventListener("click", function (e) {
