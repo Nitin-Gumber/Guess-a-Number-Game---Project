@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>guess Number game</title>
-    <!-- CSS Link file -->
-    <link rel="stylesheet" href="./style.css" />
-    <!-- Font Awesome Link file -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- Card container Start here -->
-    <div class="card_container">
-      <p>
-        Try and Guess a Random Number in 1 Minute Between 1 & 100. You have 7
-        attemps to Guess the Right Number.
-      </p>
-      <h5 class="timerun"></h5>
-      <h1>Guess a Number</h1>
-      <!-- form Section start here -->
-      <form class="form" onsubmit="return false">
-        <input
-          type="text"
-          name="guessField"
-          class="guessField"
-          placeholder="Enter your guess"
-        />
-        <input
-          type="submit"
-          value="Submit guess"
-          id="submit"
-          class="guessSubmit"
-        />
-      </form>
-      <!-- form Section end here -->
-      <!-- result and message show here -->
-      <div class="resultParas">
-        <p>Previous Guesses: <span class="guesses"></span></p>
-        <p>Guesses Remaining: <span class="lastResult">7</span></p>
-        <p class="loworHi"></p>
-      </div>
-      <!-- result section end here -->
-      <!-- Social media section start here -->
-      <div class="social_media">
-        <h2>Follow</h2>
-        <a
-          target="_blank"
-          href="https://instagram.com/nitin.gumber_?igshid=NzZlODBkYWE4Ng=="
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/nitin-kumar-a55614248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-      </div>
-      <!-- Social media section end here -->
-    </div>
-    <!-- Card container end here -->
 
-    <!-- JS Link file -->
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://guess-number-project.vercel.app/" />
+  <meta property="og:title" content="Guess Number Game - Fun and Challenging Number Guessing Game" />
+  <meta property="og:description"
+    content="Guess Number Game - Test your guessing skills! Can you guess the random number in 7 attempts? Play now and challenge yourself!" />
+  <meta property="twitter:url" content="https://guess-number-project.vercel.app/" />
+  <meta property="twitter:title" content="Guess Number Game - Fun and Challenging Number Guessing Game" />
+  <meta property="twitter:description"
+    content="Guess Number Game - Test your guessing skills! Can you guess the random number in 7 attempts? Play now and challenge yourself!" />
+  <meta name="description"
+    content="Guess Number Game - Test your guessing skills! Can you guess the random number in 7 attempts? Play now and challenge yourself!" />
+  <title>Guess Number Game - Fun and Challenging Number Guessing Game</title>
+
+  <!-- CSS Link file -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Font Awesome Link file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Card container Start here -->
+  <div class="card_container">
+    <p>
+      Try and Guess a Random Number in 1 Minute Between 1 & 100. You have 7
+      attemps to Guess the Right Number.
+    </p>
+    <h5 class="timerun"></h5>
+    <h1>Guess a Number</h1>
+    <!-- form Section start here -->
+    <form class="form" onsubmit="return false">
+      <input type="text" name="guessField" class="guessField" placeholder="Enter your guess" />
+      <input type="submit" value="Submit guess" id="submit" class="guessSubmit" />
+    </form>
+    <!-- form Section end here -->
+    <!-- result and message show here -->
+    <div class="resultParas">
+      <p>Previous Guesses: <span class="guesses"></span></p>
+      <p>Guesses Remaining: <span class="lastResult">7</span></p>
+      <p class="loworHi"></p>
+    </div>
+    <!-- result section end here -->
+    <!-- Social media section start here -->
+    <div class="social_media">
+      <h2>Follow</h2>
+      <a target="_blank" href="https://instagram.com/nitin.gumber_?igshid=NzZlODBkYWE4Ng=="><i
+          class="fa-brands fa-instagram"></i></a>
+      <a target="_blank"
+        href="https://www.linkedin.com/in/nitin-kumar-a55614248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+          class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <!-- Social media section end here -->
+  </div>
+  <!-- Card container end here -->
+
+  <!-- JS Link file -->
+  <script src="./script.js"></script>
+</body>
+
 </html>

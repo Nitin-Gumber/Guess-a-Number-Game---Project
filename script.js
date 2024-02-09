@@ -65,8 +65,7 @@ function validateGuess(guess) {
 function checkGuess(guess) {
   if (guess === randomNumber) {
     displayMessage(
-      `You guessed it Right in ${numGuess - 1} attempts & ${
-        60 - timer
+      `You guessed it Right in ${numGuess - 1} attempts & ${60 - timer
       } Seconds🎉`
     );
     endGame();
